@@ -1,6 +1,9 @@
 # docx2tex
 
 Microsoft Word（.docx）ファイルを、日本語組版に最適化された LaTeX（.tex）形式に変換するオンラインツールです。
+以下のリンクから使用できます。
+
+https://freudolacaniana.github.io/docx2tex/docx2tex.html
 
 ## 🚀 これは何？
 
@@ -48,5 +51,6 @@ This project utilizes the following libraries under the MIT License:
 - **UDOC.js**: Used for reading `.emf` files embedded within `.docx` documents.
 - **JSZip**: Used for parsing `.docx` files and generating `.zip` output.
 - **officemath2latex**: Used for parsing oMath formulas and generating their LaTex equivalents.
+
 
 
