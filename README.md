@@ -8,7 +8,7 @@ Microsoft Word 等で作成された原稿を、LaTeX で処理可能なソー�
 
 - **一括ダウンロード**: 変換後のファイルは、原稿内の画像ファイル等を含めた `.zip` 形式で取得できます。
 - **日本語組版への最適化**: `lualatex` + `jlreq` 環境を前提としており、[日本語組版処理の要件](https://www.w3.org/TR/jlreq/?lang=ja)に即した高品質なPDF出力が可能です。
-- **CloudLaTeX 対応**: 出力される `.zip` ファイルは、そのまま [CloudLaTeX](https://www.google.com/search?q=https://cloudlatex.io/) へインポートして使用できます。
+- **CloudLaTeX 対応**: 出力される `.zip` ファイルは、そのまま [CloudLaTeX](https://cloudlatex.io/) へインポートして使用できます。
 
 ### 💡 本ツールの特徴
 
@@ -48,4 +48,5 @@ This project utilizes the following libraries under the MIT License:
 - **UDOC.js**: Used for reading `.emf` files embedded within `.docx` documents.
 - **JSZip**: Used for parsing `.docx` files and generating `.zip` output.
 - **officemath2latex**: Used for parsing oMath formulas and generating their LaTex equivalents.
+
 
