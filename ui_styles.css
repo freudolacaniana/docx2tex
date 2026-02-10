@@ -1,0 +1,101 @@
+/* styles.css */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+  flex: 0 0 200px; /* デスクトップ用のラベル幅 */
+}
+
+select,
+input[type="text"] {
+  padding: 2px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 16px;
+  flex: 1; /* 残りの幅を使用 */
+}
+
+.checkbox-group,
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 200px; /* デスクトップ用のラベル幅に合わせる */
+}
+
+.checkbox-group label,
+.radio-group label {
+  margin-right: 20px;
+  font-weight: normal;
+  color: #555;
+}
+
+.checkbox-group input[type="checkbox"],
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+.multi-select {
+  margin-left: 200px; /* デスクトップ用のラベル幅に合わせる */
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* モバイル用のスタイル */
+@media (max-width: 767px) {
+  body {
+    padding: 0 10px; /* モバイル用の余白を調整 */
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  label {
+    flex: 0 0 auto;
+    margin-bottom: 5px;
+  }
+
+  .checkbox-group,
+  .radio-group,
+  .multi-select {
+    margin-left: 0;
+  }
+}

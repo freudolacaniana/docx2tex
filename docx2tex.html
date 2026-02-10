@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.docxからTeXへ変換</title>
+    <link rel="stylesheet" href="ui_styles.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./dist/jszip.min.js" defer></script>
+    <script src="./dist/UDOC.js" defer></script>
+    <script src="./dist/FromEMF.js" defer></script>
+    <script src="./dist/ToContext2D.js" defer></script>
+    <script src="./main_script.js" defer></script>
+    <script src="./ui_script.js" defer></script>
+    <script src="./officemath2latex.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (typeof buildOptions === "function") {
+          buildOptions(settingList, "settings");
+          buildOptions(settingList2, "settings2");
+          buildOptions(settingList3, "settings3");
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <main class="container">
+      <h1>.docxからTeXへ変換</h1>
+
+      <section>
+        <h2>設定</h2>
+        <p>変換を行う前に、まず下記の設定を行ってください。</p>
+        <h3>ページの設定</h3>
+        <div id="settings"></div>
+        <h3>見出しの設定</h3>
+        <div id="settings2"></div>
+        <h3>その他の設定</h3>
+        <div id="settings3"></div>
+      </section>
+
+      <section>
+        <h2>.docxファイルの選択</h2>
+        <p>
+          上記の設定が終わったら、以下の「.docxファイルを選択」ボタンを押してファイルを選択するか、下の枠内に.docxファイルをドラッグ＆ドロップしてください。
+        </p>
+        <p>ファイルが選択されると、変換が開始されます。</p>
+        <input type="file" id="zip-file" accept=".docx" style="display: none" />
+        <button id="file-select" type="button">.docxファイルを選択</button>
+        <div id="drop-area">
+          <p>またはここに.docxファイルをドラッグ＆ドロップ</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>変換結果</h2>
+        <p>
+          変換されたファイルは、以下の「内容を.zipファイルとして保存」ボタンからダウンロードできます（ファイルを選択していない状態では、ボタンは表示されません）。
+        </p>
+        <p>
+          （注意）CloudLaTeXでタイプセット（コンパイル）する際は、CloudLaTeXへのインポート時に「LaTeXエンジン」→「lualatex」を選択するか、インポート後に「メニュー」→「LaTeXエンジン」→「lualatex」を選択する必要があります。
+        </p>
+        <button id="save-button" style="display: none">変換結果を.zipファイルとして保存</button>
+        <br />
+        <div id="xml-viewarea" class="sourcecode"></div>
+      </section>
+
+      <section>
+        <h2>バージョン履歴</h2>
+        <ul>
+          <li>2026年2月11日、公開（バージョン1.00）</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
