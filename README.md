@@ -47,3 +47,5 @@ This project utilizes the following libraries under the MIT License:
 
 - **UDOC.js**: Used for reading `.emf` files embedded within `.docx` documents.
 - **JSZip**: Used for parsing `.docx` files and generating `.zip` output.
+- **officemath2latex**: Used for parsing oMath formulas and generating their LaTex equivalents.
+
